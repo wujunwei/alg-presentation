@@ -8,7 +8,7 @@ transition = "cube"
 transition_speed = "slow"
 auto_animate = true
 [logo]
-src = "favicon.ico"
+src = "index-logo.png"
 +++
 
 # 有趣的算法
@@ -56,6 +56,8 @@ $$
 ---
 
 # 怎么做？
+
+[举个🌰](/example)
 
 ---
 

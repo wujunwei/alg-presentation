@@ -27,7 +27,7 @@ mediaType = "text/html"
 isHTML = true
 
 [params.reveal_hugo]
-highlight_theme = "vs2015"
+highlight_theme = "railscasts"
 history = true
 progress = false
 theme="moon"
