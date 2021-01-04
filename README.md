@@ -1,2 +1,2 @@
-# devops-presentation
-a powerpoint wbsite made by reveal-hugo 
+# Algorithm-presentation
+a powerPoint website made by reveal-hugo 
