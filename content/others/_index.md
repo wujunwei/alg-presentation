@@ -44,6 +44,6 @@ func productExceptSelf(nums []int) []int {
 ```
 
 ---
-#### [Start over](/#/4)
+#### [Start over](/#/9)
 
 
