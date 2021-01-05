@@ -6,7 +6,7 @@ outputs = ["Reveal"]
 margin = 0.02
 transition = "slide"
 transition_speed = "slow"
-theme="league"
+theme="beige"
 [logo]
 src = "index-logo.png"
 +++
@@ -19,6 +19,50 @@ src = "index-logo.png"
 输入: [1,2,3,4]
 输出: [24,12,8,6]
 ```
+
+---
+
+{{% section %}}
+
+![](/images/238_1.png)
+
+---
+
+![](/images/238_2.png)
+
+---
+
+![](/images/238_3.png)
+
+---
+
+![](/images/238_4.png)
+
+---
+
+![](/images/238_5.png)
+
+---
+
+![](/images/238_6.png)
+
+---
+
+![](/images/238_7.png)
+
+---
+
+![](/images/238_8.png)
+
+---
+
+![](/images/238_9.png)
+
+---
+
+![](/images/238_10.png)
+
+{{% /section %}}
 
 ---
 
@@ -44,6 +88,5 @@ func productExceptSelf(nums []int) []int {
 ```
 
 ---
-#### [Start over](/#/4)
-
+#### [返回](/#/4)
 

@@ -11,39 +11,13 @@ theme="league"
 src = "index-logo.png"
 +++
 
-给你一个长度为n的数组nums， 其中 n>1,返回nums中除nums[i]之外其余各元素的乘积。
-
-
-
-```
-输入: [1,2,3,4]
-输出: [24,12,8,6]
-```
+<h3 class="fragment fade-up">我们来玩个游戏</h3>
+<h3 class="fragment fade-up" >心中想一个1~100的整数</h3>
+<h3 class="fragment fade-up" >最接近所有人所想的数的平均数的一半就是赢家🏆</h3>
+<small class="fragment fade-up" >PS:如果有多个人都最接近，取最早输入的人作为赢家</small>
 
 ---
 
-### answer
-
-```go
-package main
-func productExceptSelf(nums []int) []int {
-    length := len(nums)
-    answer := make([]int, length)
-    answer[0] = 1
-    for i := 1; i < length; i++ {
-        answer[i] = nums[i-1] * answer[i-1]
-    }
-    R := 1
-    for i := length - 1; i >= 0; i-- {
-        answer[i] = answer[i] * R
-        R *= nums[i]
-    }
-    return answer
-}
-
-```
-
----
-#### [Start over](/#/4)
+#### [返回](/#/7)
 
 
