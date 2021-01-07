@@ -11,82 +11,156 @@ theme="beige"
 src = "index-logo.png"
 +++
 
-给你一个长度为n的数组nums， 其中 n>1,返回nums中除nums[i]之外其余各元素的乘积。
+输入 A，B 两个数字（均小于100），返回A+B。
 
 ```
-输入: [1,2,3,4]
-输出: [24,12,8,6]
+输入: 1 2 
+输出: 3
 ```
 ```
-输入: [4,5,1,8,2]
-输出: [80,64,320,40,160]
+输入: 45 67
+输出: 112
 ```
 ---
 
 {{% section %}}
 
-![](/images/238_1.png)
+### c
+
+```c
+#include <stdio.h>
+
+int main() {
+    int a,b;
+    scanf("%d%d",&a,&b);
+    printf("%d", a+b);
+    return 0;
+}
+```
 
 ---
 
-![](/images/238_2.png)
+### c++
+
+```c++
+#include <iostream>
+#include <cstdio>
+
+using namespace std;
+
+int main() {
+    int a,b;
+    cin >> a >> b;
+    cout << a+b;
+    return 0;
+}
+```
 
 ---
 
-![](/images/238_3.png)
+### c#
+
+```c#
+using System;
+
+public class APlusB{
+    private static void Main(){
+        string[] input = Console.ReadLine().Split(' ');
+        Console.WriteLine(int.Parse(input[0]) + int.Parse(input[1]));
+    }
+}
+```
 
 ---
 
-![](/images/238_4.png)
+### python
+
+```python
+s = raw_input().split()
+print int(s[0]) + int(s[1])
+```
+
+```python
+s = input().split()
+print(int(s[0]) + int(s[1]))
+```
 
 ---
 
-![](/images/238_5.png)
+### ruby
+
+```ruby
+a, b = gets.split.map(&:to_i)
+print a+b
+```
 
 ---
 
-![](/images/238_6.png)
+### php
+
+```php
+<?php
+$input = trim(file_get_contents("php://stdin"));
+list($a, $b) = explode(' ', $input);
+echo $a + $b;
+```
 
 ---
 
-![](/images/238_7.png)
+### rust
+
+```rust
+use std::io;
+
+fn main(){
+    let mut input=String::new();
+    io::stdin().read_line(&mut input).unwrap();
+    let mut s=input.trim().split(' ');
+
+    let a:i32=s.next().unwrap()
+               .parse().unwrap();
+    let b:i32=s.next().unwrap()
+               .parse().unwrap();
+    println!("{}",a+b);
+}
+```
 
 ---
 
-![](/images/238_8.png)
+### golang
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+    var a, b int
+    fmt.Scanf("%d%d", &a, &b)
+    fmt.Println(a+b)
+}
+```
 
 ---
 
-![](/images/238_9.png)
+### 文言文(https://github.com/wenyan-lang/wenyan)
 
----
+```文言文
+施「require('fs').readFileSync」於「「/dev/stdin」」。名之曰「數據」。
+施「(buf => buf.toString().trim())」於「數據」。昔之「數據」者。今其是矣。
+施「(s => s.split(' '))」於「數據」。昔之「數據」者。今其是矣。
+注曰。「「文言尚菜，無對象之操作，故需 JavaScript 之语法」」。
 
-![](/images/238_10.png)
+夫「數據」之一。取一以施「parseInt」。名之曰「甲」。
+夫「數據」之二。取一以施「parseInt」。名之曰「乙」。
+
+加「甲」以「乙」。書之。
+```
 
 {{% /section %}}
 
 ---
 
-### answer
-
-```go
-package main
-func productExceptSelf(nums []int) []int {
-    length := len(nums)
-    answer := make([]int, length)
-    answer[0] = 1
-    for i := 1; i < length; i++ {
-        answer[i] = nums[i-1] * answer[i-1]
-    }
-    R := 1
-    for i := length - 1; i >= 0; i-- {
-        answer[i] = answer[i] * R
-        R *= nums[i]
-    }
-    return answer
-}
-
-```
 
 ---
 #### [返回](/#/4)
