@@ -7,8 +7,6 @@ margin = 0.02
 transition = "slide"
 transition_speed = "slow"
 theme="league"
-[logo]
-src = "index-logo.png"
 +++
 
 ### 基础知识

@@ -26,6 +26,9 @@ baseName = "index"
 mediaType = "text/html"
 isHTML = true
 
+[params.logo]
+src = "index-logo.png"
+
 [params.reveal_hugo]
 highlight_theme = "railscasts"
 history = true

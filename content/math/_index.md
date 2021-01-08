@@ -7,8 +7,6 @@ margin = 0.02
 transition = "slide"
 transition_speed = "slow"
 theme="beige"
-[logo]
-src = "index-logo.png"
 +++
 
 ## 🐸跳台阶

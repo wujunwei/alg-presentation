@@ -7,8 +7,6 @@ margin = 0.02
 transition = "cube"
 transition_speed = "slow"
 auto_animate = true
-[logo]
-src = "index-logo.png"
 +++
 
 # 有趣的算法

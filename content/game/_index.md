@@ -7,8 +7,6 @@ margin = 0.02
 transition = "slide"
 transition_speed = "slow"
 theme="league"
-[logo]
-src = "index-logo.png"
 +++
 
 <h3 class="fragment fade-up">我们来玩个游戏</h3>
