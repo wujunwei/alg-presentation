@@ -23,6 +23,19 @@ src = "index-logo.png"
 ```
 ---
 
+
+{{% section %}}
+
+![](/images/img.png)
+
+---
+
+![](/images/img2.png)
+
+{{% /section %}}
+
+---
+
 {{% section %}}
 
 ### c
