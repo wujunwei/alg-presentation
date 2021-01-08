@@ -50,6 +50,19 @@ $$F(n)=(F(n-1)+F(n-2))\\%1000000007$$
 ```go
 package main
 func fib(n int) int {
+    return (fib(n-1)+fib(n-1))%(1e9+7)
+}
+```
+
+---
+
+### answer 2
+
+$$F(n)=(F(n-1)+F(n-2))\\%1000000007$$
+
+```go
+package main
+func fib(n int) int {
     if n < 2 {
         return n
     }
@@ -64,7 +77,9 @@ func fib(n int) int {
 ```
 
 ---
-### answer 2
+
+### answer 3
+
 {{% section %}}
 
 <small>矩阵乘法➕快速幂</small>
@@ -184,7 +199,7 @@ func fib(n int) int {
 
 ---
 
-### answer 4
+### answer 5
 
 ```go
 package main
