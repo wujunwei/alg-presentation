@@ -143,7 +143,12 @@ func majorityElement(nums []int) int {
 ---
 
 ### answer 1
-暴力（Brute Force）
+
+暴力（Brute Force）最直接的方法 - 沿着字符换逐步移动滑动窗口，将窗口内的子串与 needle 字符串比较。
+![](/images/bf.png)
+
+---
+
 ```go
 package main
 func strStr(haystack string, needle string) int {
@@ -228,6 +233,7 @@ func strStr(haystack string, needle string) int {
 
 ### KMP （Boyer-Moore、Sunday）
 
+![](/images/substrings.png)
 
 ---
 
