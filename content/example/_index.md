@@ -19,18 +19,6 @@ theme="beige"
 输入: 45 67
 输出: 112
 ```
----
-
-
-{{% section %}}
-
-![](/images/img.png)
-
----
-
-![](/images/img2.png)
-
-{{% /section %}}
 
 ---
 
@@ -154,7 +142,7 @@ func main() {
 
 ---
 
-### 文言文(https://github.com/wenyan-lang/wenyan)
+### 文言([编程语言：文言文](https://github.com/wenyan-lang/wenyan))
 
 ```文言文
 施「require('fs').readFileSync」於「「/dev/stdin」」。名之曰「數據」。
@@ -167,6 +155,18 @@ func main() {
 
 加「甲」以「乙」。書之。
 ```
+
+{{% /section %}}
+
+---
+
+{{% section %}}
+
+![](/images/img.png)
+
+---
+
+![](/images/img2.png)
 
 {{% /section %}}
 
