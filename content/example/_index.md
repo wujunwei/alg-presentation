@@ -6,7 +6,7 @@ outputs = ["Reveal"]
 margin = 0.02
 transition = "slide"
 transition_speed = "slow"
-theme="beige"
+theme="serif"
 +++
 
 输入 A，B 两个数字（均小于100），返回A+B。
