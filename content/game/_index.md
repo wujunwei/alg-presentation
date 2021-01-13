@@ -16,6 +16,8 @@ theme="beige"
 
 ---
 
+<a href="http://118.25.25.221/avg" target="_blank">点击查看答案</a>
+
 博弈只需领先一步，高人一筹！
 
 {{% fragment %}}
@@ -27,8 +29,6 @@ theme="beige"
 ---
 
 ### 总结
-
-<a href="http://118.25.25.221/avg" target="_blank">点击查看答案</a>
 
 {{% fragment %}}
 
@@ -95,6 +95,6 @@ func stoneGame(piles []int) bool {
     return true
 }
 ```
-#### [返回](/#/7)
+#### [下一节](/#/7)
 
 
