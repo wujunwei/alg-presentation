@@ -130,7 +130,6 @@ func majorityElement(nums []int) int {
 
 [更多算法](https://www.processon.com/view/link/5ff6ab75f346fb340dedc38c)
 
-[更多题目](http://192.168.138.67:30022/)
 #### [下一节](/#/9)
 
 
