@@ -49,6 +49,9 @@ $$F(n)=(F(n-1)+F(n-2))\\%1000000007$$
 ```go
 package main
 func fib(n int) int {
+	if n <=1 {
+		return 1
+    }
     return (fib(n-1)+fib(n-2))%(1e9+7)
 }
 ```
