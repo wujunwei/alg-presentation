@@ -201,15 +201,114 @@ func fib(n int) int {
 
 ---
 
-### answer 5
+给你一个整数 n ，返回 和为 n 的完全平方数的最少数量 。
+
+提示： 1 <= n <= 10000
+
+
+```
+输入：n = 12
+输出：3 
+解释：12 = 4 + 4 + 4
+```
+```
+输入：n = 13
+输出：2
+解释：13 = 4 + 9
+```
+---
+
+#### 方法一：动态规划
+
+{{% section %}}
+
+$f[i]$ 表示最少需要多少个数的平方来表示整数 $i$。
+这些数必然落在区间 $[1,\\sqrt{n}]$。
+$$
+f[i]=1+\\min_{j=1}^{\\lfloor\\sqrt{i}\\rfloor}{f[i-j^2]}
+$$
+
+---
+
+**复杂度分析**
+
+- 时间复杂度：$O(n\\sqrt{n})$，其中 $n$ 为给定的正整数。
+- 空间复杂度：$O(n)$。我们需要 $O(n)$ 的空间保存状态。
+---
 
 ```go
-package main
-func fib(n int) {
-	nums := [30]int{1,1,2,3,5,8,13,21,34,55,89,144,233,377,610,987,1597,2584,4181,6765,10946,17711,28657,46368,75025,121393,196418,317811,514229,832040};
-	return nums[n-1];
+func numSquares(n int) int {
+    f := make([]int, n+1)
+    for i := 1; i <= n; i++ {
+        minn := math.MaxInt32
+        for j := 1; j*j <= i; j++ {
+            minn = min(minn, f[i-j*j])
+        }
+        f[i] = minn + 1
+    }
+    return f[n]
+}
+func min(a, b int) int {
+    if a < b {
+        return a
+    }
+    return b
 }
 ```
+
+{{% /section %}}
+
+---
+
+#### 方法二：数学
+
+{{% section %}}
+
+`拉格朗日四平方和定理`: 任意一个正整数都可以被表示为至多四个正整数的平方和。 同时四平方和定理包含了一个更强的结论：当且仅当 $n = 4^k \\times (8m+7)$ 时，$n$ 可以被表示为至多三个正整数的平方和。因此，当 $n = 4^k \\times (8m+7)$ 时，$n$ 只能被表示为四个正整数的平方和。
+
+---
+
+[//]: # (当 $n ≠ 4^k \\times &#40;8m+7&#41;$ 时，我们需要判断到底多少个完全平方数能够表示 $n$，我们知道答案只会是 $1,2,3$ 中的一个：)
+-  $1$ ：则必有 $n$ 为完全平方数，这很好判断；
+-  $2$ ：则有 $n=a^2+b^2$，我们只需要枚举所有的 $a(1 \\leq a \\leq \\sqrt{n})$，判断 $n-a^2$ 是否为完全平方数即可；
+-  $3$ ：我们很难在一个优秀的时间复杂度内解决它，但我们只需要检查答案为 $1$ 或 $2$ 的两种情况，即可利用排除法确定答案。
+
+---
+
+```go [Golang]
+// 判断是否为完全平方数
+func isPerfectSquare(x int) bool {
+    y := int(math.Sqrt(float64(x)))
+    return y*y == x
+}
+// 判断是否能表示为 4^k*(8m+7)
+func checkAnswer4(x int) bool {
+    for x%4 == 0 {
+        x /= 4
+    }
+    return x%8 == 7
+}
+func numSquares(n int) int {
+    if isPerfectSquare(n) {
+        return 1
+    }
+    if checkAnswer4(n) {
+        return 4
+    }
+    for i := 1; i*i <= n; i++ {
+        j := n - i*i
+        if isPerfectSquare(j) {
+            return 2
+        }
+    }
+    return 3
+}
+```
+
+- 时间复杂度：$O(\\sqrt{n})$
+- 空间复杂度：$O(1)$
+
+{{% /section %}}
 
 ---
 
