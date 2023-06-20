@@ -9,7 +9,7 @@ transition_speed = "slow"
 theme="league"
 +++
 
-输入 A，B 两个数字（均小于100），返回A+B。
+输入 A，B 两个整数（均小于100，大于0），返回A+B。
 
 ```
 输入: 1 2 
@@ -126,7 +126,7 @@ fn main(){
 
 ---
 
-### golang
+### go
 
 ```go
 package main

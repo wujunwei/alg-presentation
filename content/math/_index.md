@@ -184,9 +184,7 @@ func pow(a float64, n int) float64 {
 			ret = a
 		}
 		a = a * a
-		for a > 1e9+7 {
-			a -= 1e9 + 7
-		}
+		a %= 1e9+7
 	}
 	return ret
 }
@@ -275,7 +273,7 @@ func min(a, b int) int {
 
 ---
 
-```go [Golang]
+```go
 // 判断是否为完全平方数
 func isPerfectSquare(x int) bool {
     y := int(math.Sqrt(float64(x)))

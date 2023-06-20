@@ -125,11 +125,6 @@ func majorityElement(nums []int) int {
 	return index
 }
 ```
-
----
-
-
-
 ---
 
 [更多算法](https://www.processon.com/view/link/5ff6ab75f346fb340dedc38c)
